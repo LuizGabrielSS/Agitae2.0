@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "SegFis Mobile",
+    "slug": "SegFis Mobile",
+    "version": "5.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.luizgabriel1978.SegFisMobile"
+    }
+  },
+  "name": "SegFisMobile"
+}
