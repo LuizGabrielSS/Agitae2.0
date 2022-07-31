@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform,Alert} from "react-native";
-import estilos from '../Estilos';
+import estilos from './Estilos';
 import {Auth} from '../../../contexts/Auth'
 
 export default function TelaLogin({navigation}){
