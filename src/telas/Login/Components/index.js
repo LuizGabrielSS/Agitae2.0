@@ -49,18 +49,18 @@ export default function TelaLogin({navigation}){
                     alertComponent("Campo Login Errado","Usuario não encontrado","OK",fallBackToDefaultAuth)
                 }
             }else{
-                SetStatusPassword(estilos.PasswordVazio)
+                SetStatusPassword(estilos.PasswordErrada)
                 alertComponent("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",fallBackToDefaultAuth)
             }
         }else{
-            SetStatusEmail(estilos.EmailVazio)
+            SetStatusEmail(estilos.EmailErrada)
             alertComponent("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",fallBackToDefaultAuth)
         }
     }
 
     return(<KeyboardAvoidingView
     behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
-    style={estilos.Contianer}
+    style={estilos.Container}
     >
         <View style={estilos.ContainerLogin}>
             <Text style={estilos.TextoLogin}>Login</Text>
@@ -72,7 +72,6 @@ export default function TelaLogin({navigation}){
             keyboardType="email-address"
             placeholder="Digite seu e-mail"
             secureTextEntry={false}
-            placeholderTextColor="#ffffff"
             />
             <TextInput
             style={StatusPassword}
@@ -80,12 +79,11 @@ export default function TelaLogin({navigation}){
             keyboardType="default"
             placeholder="Digite sua senha"
             secureTextEntry={true}
-            placeholderTextColor="#ffffff"
             />
             <TouchableOpacity style={estilos.ContainerBotao} onPress={() => Logar()}>
                 <Text style={estilos.TextoBotao}>ENTRAR</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('CADASTRO')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
                 <Text style={estilos.TextoOutrosBotoes}>Cadastre-se</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('SENHA')}>

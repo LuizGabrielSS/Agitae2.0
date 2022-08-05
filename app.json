@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SegFis Mobile",
-    "slug": "SegFis Mobile",
+    "name": "Agitae",
+    "slug": "Agitae",
     "version": "5.0.0",
     "assetBundlePatterns": [
       "**/*"
@@ -10,5 +10,5 @@
       "package": "com.luizgabriel1978.SegFisMobile"
     }
   },
-  "name": "SegFisMobile"
+  "name": "Agitae"
 }
