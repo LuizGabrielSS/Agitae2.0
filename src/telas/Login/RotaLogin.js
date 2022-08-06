@@ -5,7 +5,7 @@ import Login from './Components'
 import Cadastro from '../Cadastro'
 import Senha from '../Senha'
 import Perfil from '../Perfil'
-//import Inicial from '../Inicial'
+import RotaPrincipal from '../RotaPrincipal'
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +24,12 @@ export default function Rotas(){
             <Stack.Screen
             name="Cadastro" 
             component={Cadastro}/>
+            <Stack.Screen
+            name="Senha" 
+            component={Senha}/>
+            <Stack.Screen
+            name="Inicial" 
+            component={RotaPrincipal}/>
           </Stack.Navigator>
           </NavigationContainer>
         );

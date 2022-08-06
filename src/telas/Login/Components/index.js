@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform,Alert} from "react-native";
 import estilos from './Estilos';
 import {Auth} from '../../../contexts/Auth'
@@ -35,8 +35,8 @@ export default function TelaLogin({navigation}){
 
     //Função do Botao Logar
     function Logar(){
-        if(Email != []){
-            if(Password != []){
+        if(Email.length != 0){
+            if(Password.length != 0){
                 if(Email == Usuario){
                     if(Password == Senha){
                         navigation.navigate('Inicial')
