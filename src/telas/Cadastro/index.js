@@ -1,7 +1,9 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform,Alert} from "react-native";
 import estilos from './Estilos';
 import {Auth} from '../../contexts/Auth'
+import FallBack from '../../components/FallBack'
+import Alerta from '../../components/Alerta'
 
 export default function Cadastro({navigation}){
     
@@ -27,19 +29,6 @@ export default function Cadastro({navigation}){
 
     const[Password,SetPassword] = useState([])
 
-    const alertComponent = (title, mess, btnTxt, btnFunc) => {
-        return Alert.alert(title, mess, [
-          {
-            text: btnTxt,
-            onPress: btnFunc,
-          },
-        ]);
-      };
-    
-      const fallBackToDefaultAuth = () => {
-        console.log("Luiz Não erra");
-      };
-
     const Cadastrar = () => {
         if(Usuario.length != 0){
             if(CPF.length != 0){
@@ -48,10 +37,10 @@ export default function Cadastro({navigation}){
                         if(Senha.length != 0){
                             if(Password.length != 0){
                                 if(Senha == Password){
-                                    alertComponent("Cadastro Realizado","Cadastro realizado com Sucesso","OK",navigation.navigate("Login"))
+                                    Alerta("Cadastro Realizado","Cadastro realizado com Sucesso","OK",navigation.navigate("Login"))
                                 }else{
                                     SetEstiloPassword(estilos.InputErrado)
-                                    alertComponent("Senhas diferentes","As senhas não estão iguais","OK",fallBackToDefaultAuth())
+                                    Alerta("Senhas diferentes","As senhas não estão iguais","OK",FallBack())
                                 }
                             }else{
                                 SetEstiloPassword(estilos.InputErrado)
@@ -60,7 +49,7 @@ export default function Cadastro({navigation}){
                                 SetEstiloEmail(estilos.Input)
                                 SetEstiloCPF(estilos.Input)
                                 SetEstiloNome(estilos.Input)
-                                alertComponent("Senha Vazia", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                                Alerta("Senha Vazia", "Nenhum campo pode ficar vazio","OK",FallBack())
                             }
                         }else{
                             SetEstiloSenha(estilos.InputErrado)
@@ -68,29 +57,29 @@ export default function Cadastro({navigation}){
                             SetEstiloEmail(estilos.Input)
                             SetEstiloCPF(estilos.Input)
                             SetEstiloNome(estilos.Input)
-                            alertComponent("Senha Vazia", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                            Alerta("Senha Vazia", "Nenhum campo pode ficar vazio","OK",FallBack())
                         }
                     }else{
                         SetEstiloCelular(estilos.InputErrado)
                         SetEstiloEmail(estilos.Input)
                         SetEstiloCPF(estilos.Input)
                         SetEstiloNome(estilos.Input)
-                        alertComponent("Celular Vazi0", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                        Alerta("Celular Vazi0", "Nenhum campo pode ficar vazio","OK",FallBack())
                     }
                 }else{
                     SetEstiloEmail(estilos.InputErrado)
                     SetEstiloCPF(estilos.Input)
                 SetEstiloNome(estilos.Input)
-                    alertComponent("E-mail Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                    Alerta("E-mail Vazio", "Nenhum campo pode ficar vazio","OK",FallBack())
                 }
             }else{
                 SetEstiloCPF(estilos.InputErrado)
                 SetEstiloNome(estilos.Input)
-                alertComponent("CPF Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                Alerta("CPF Vazio", "Nenhum campo pode ficar vazio","OK",FallBack())
             }
         }else{
             SetEstiloNome(estilos.InputErrado)
-            alertComponent("Nome Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+            Alerta("Nome Vazio", "Nenhum campo pode ficar vazio","OK",FallBack())
         }
     }
 

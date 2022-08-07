@@ -74,21 +74,7 @@ export default StyleSheet.create({
         textAlign:"center",
         margin:10
     },
-    EmailNormal:{
-        color:"#000",
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-        borderWidth: 5,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        textAlign:"left",
-        borderColor:"#260033",
-        margin:10
-    },
-    PasswordNormal:{
+    Input:{
         color:"#000",
         padding: 20,
         marginVertical: 8,
@@ -102,20 +88,7 @@ export default StyleSheet.create({
         textAlign:"left",
         margin:10
     },
-    PasswordErrada:{
-        color:"#000",
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-        borderWidth: 5,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
-        borderColor:"#ff0000",
-        textAlign:"left",
-    },
-    EmailErrada:{
+    InputErrada:{
         color:"#000",
         padding: 20,
         marginVertical: 8,

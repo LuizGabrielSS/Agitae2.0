@@ -2,6 +2,8 @@ import React, {useState, useEffect, useContext} from 'react';
 import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform,Alert} from "react-native";
 import estilos from './Estilos';
 import {Auth} from '../../../contexts/Auth'
+import FallBack from '../../components/FallBack'
+import Alerta from '../../components/Alerta'
 
 export default function Senha({navigation}){
     //CONSTANTES PARA VERIFICAR SE PODE LOGAR OU NÃO
@@ -15,19 +17,6 @@ export default function Senha({navigation}){
 
     const[Email,SetEmail] = useState([])
 
-    const alertComponent = (title, mess, btnTxt, btnFunc) => {
-        return Alert.alert(title, mess, [
-          {
-            text: btnTxt,
-            onPress: btnFunc,
-          },
-        ]);
-      };
-    
-      const fallBackToDefaultAuth = () => {
-        console.log("Luiz Não erra");
-      };
-
     const Logar = () => {
         if(Email.length != 0){
             if(Email == Usuario){
@@ -37,30 +26,42 @@ export default function Senha({navigation}){
                             alertComponent("Senha Modificada","Senha Modificada com sucesso", 'OK',navigation.navigate('Login'))
                         }
                         else{
-                            alertComponent("Senhas não batem", "As senhas não são as mesmas","OK",fallBackToDefaultAuth())
+                            SetStatusPassword(estilos.InputErrada)
+                            SetStatusSenha(estilos.Input)
+                    SetStatusEmail(estilos.Input)
+                            Alerta("Senhas não batem", "As senhas não são as mesmas","OK",FallBack())
                         }
                     }
                     else{
-                        alertComponent("Campo Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                        SetStatusPassword(estilos.InputErrada)
+                        SetStatusSenha(estilos.Input)
+                    SetStatusEmail(estilos.Input)
+                        Alerta("Campo Vazio", "Nenhum campo pode ficar vazio","OK",FallBack())
                     }
                 }
                 else{
-                    alertComponent("Campo Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                    SetStatusSenha(estilos.InputErrada)
+                    SetStatusEmail(estilos.Input)
+                    Alerta("Campo Vazio", "Nenhum campo pode ficar vazio","OK",FallBack())
                 }
             }
             else{
-                alertComponent("Campo Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
+                SetStatusEmail(estilos.InputErrada)
+                Alerta("Usuario Inexistente", "O usuario não existe no sistema","OK",FallBack())
             }
         }
         else{
-                    alertComponent("Campo Vazio", "Nenhum campo pode ficar vazio","OK",fallBackToDefaultAuth())
-                }
+            SetStatusEmail(estilos.InputErrada)
+            Alerta("Campo Vazio", "Nenhum campo pode ficar vazio","OK",FallBack())
+        }
     }
 
     //CONSTANTES DE ESTILIZAÇÃO
-    const[StatusEmail,SetStatusEmail] = useState(estilos.EmailNormal)
+    const[StatusEmail,SetStatusEmail] = useState(estilos.Input)
 
-    const[StatusPassword,SetStatusPassword] = useState(estilos.PasswordNormal)
+    const[StatusSenha,SetStatusSenha] = useState(estilos.Input)
+
+    const[StatusPassword,SetStatusPassword] = useState(estilos.Input)
 
     return(<KeyboardAvoidingView
         behavior={Platform.OS == 'ios' ? 'padding' : 'height'}
@@ -78,7 +79,7 @@ export default function Senha({navigation}){
                 secureTextEntry={false}
                 />
                 <TextInput
-                style={StatusPassword}
+                style={StatusSenha}
                 onChangeText={value =>{SetSenha(value)}}
                 keyboardType="default"
                 placeholder="Digite sua senha"

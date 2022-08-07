@@ -2,6 +2,8 @@ import React, {useState, useContext} from 'react';
 import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform,Alert} from "react-native";
 import estilos from './Estilos';
 import {Auth} from '../../../contexts/Auth'
+import FallBack from '../../../components/FallBack'
+import Alerta from '../../../components/Alerta'
 
 export default function TelaLogin({navigation}){
 
@@ -16,22 +18,9 @@ export default function TelaLogin({navigation}){
     const {Senha} = useState(Auth)
 
     //CONSTANTES DE ESTILIZAÇÃO
-    const[StatusEmail,SetStatusEmail] = useState(estilos.EmailNormal)
+    const[StatusEmail,SetStatusEmail] = useState(estilos.Input)
 
-    const[StatusPassword,SetStatusPassword] = useState(estilos.PasswordNormal)
-
-    const alertComponent = (title, mess, btnTxt, btnFunc) => {
-    return Alert.alert(title, mess, [
-      {
-        text: btnTxt,
-        onPress: btnFunc,
-      },
-    ]);
-  };
-
-  const fallBackToDefaultAuth = () => {
-    console.log("Luiz Não erra");
-  };
+    const[StatusPassword,SetStatusPassword] = useState(estilos.Input)
 
     //Função do Botao Logar
     function Logar(){
@@ -41,20 +30,23 @@ export default function TelaLogin({navigation}){
                     if(Password == Senha){
                         navigation.navigate('Inicial')
                     }else if(Password != Senha){
-                        SetStatusPassword(estilos.PasswordErrada)
-                        alertComponent("Campo Senha Errado","Senha Incorreta","OK",fallBackToDefaultAuth)
+                        SetStatusPassword(estilos.InputErrado)
+                        SetStatusEmail(estilos.Input)
+                        Alerta("Campo Senha Errado","Senha Incorreta","OK",FallBack())
                     }
                 }else if(Email != Usuario){
-                    SetStatusEmail(estilos.EmailErrada)
-                    alertComponent("Campo Login Errado","Usuario não encontrado","OK",fallBackToDefaultAuth)
+                    SetStatusEmail(estilos.InputErrado)
+                    SetStatusPassword(estilos.Input)
+                    Alerta("Campo Login Errado","Usuario não encontrado","OK",FallBack())
                 }
             }else{
-                SetStatusPassword(estilos.PasswordErrada)
-                alertComponent("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",fallBackToDefaultAuth)
+                SetStatusPassword(estilos.InputErrado)
+                SetStatusEmail(estilos.Input)
+                Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
             }
         }else{
-            SetStatusEmail(estilos.EmailErrada)
-            alertComponent("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",fallBackToDefaultAuth)
+            SetStatusEmail(estilos.InputErrado)
+            Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
         }
     }
 
