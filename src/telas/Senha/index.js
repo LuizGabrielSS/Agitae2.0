@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useContext} from 'react';
-import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform,Alert} from "react-native";
+import React, {useState, useContext} from 'react';
+import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform} from "react-native";
 import estilos from './Estilos';
 import {Auth} from '../../../contexts/Auth'
 import FallBack from '../../components/FallBack'

@@ -9,9 +9,10 @@ export default function AuthProvider({ children }) {
     const[Email,SetEmail] = useState([])
     const[Senha,SetSenha] = useState([])
     const[Celular,SetCelular] = useState([])
+    const[Foto,SetFoto] = useState([])
 
     return(<Auth.Provider
-    value={{SetUsuario,Usuario,Celular,SetCelular,Senha,SetSenha,Email,SetEmail,CPF,SetCPF}}
+    value={{SetUsuario,Usuario,Celular,SetCelular,Senha,SetSenha,Email,SetEmail,CPF,SetCPF,Foto,SetFoto}}
     >
         {children}
     </Auth.Provider>)
