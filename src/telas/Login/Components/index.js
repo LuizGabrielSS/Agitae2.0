@@ -24,6 +24,8 @@ export default function TelaLogin({navigation}){
 
     //Função do Botao Logar
     function Logar(){
+        navigation.navigate('Inicial')
+        /*
         if(Email.length != 0){
             if(Password.length != 0){
                 if(Email == Usuario){
@@ -47,7 +49,7 @@ export default function TelaLogin({navigation}){
         }else{
             SetStatusEmail(estilos.InputErrado)
             Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
-        }
+        }*/
     }
 
     return(<KeyboardAvoidingView
@@ -78,7 +80,7 @@ export default function TelaLogin({navigation}){
             <TouchableOpacity onPress={() => navigation.navigate('Cadastro')}>
                 <Text style={estilos.TextoOutrosBotoes}>Cadastre-se</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('SENHA')}>
+            <TouchableOpacity onPress={() => navigation.navigate('Senha')}>
                 <Text style={estilos.TextoOutrosBotoes}>Esqueci minha senha</Text>
             </TouchableOpacity>
         </ScrollView>
