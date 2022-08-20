@@ -7,7 +7,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.luizgabriel1978.SegFisMobile"
+      "package": "com.luizgabriel1978.Agitae"
     }
   },
   "name": "Agitae"
