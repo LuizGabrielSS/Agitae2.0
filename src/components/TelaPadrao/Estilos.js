@@ -6,5 +6,8 @@ export default StyleSheet.create({
   },
   ajusteTelaBaixo: {
     flex: 0,
-  }
+  },
+  preencher:{
+    flex: 1,
+}
 });

@@ -6,6 +6,5 @@ export default function Inicial(){
     return(
         <View>
             <Carrousel/>
-        </View>
-    )
+        </View>)
 }

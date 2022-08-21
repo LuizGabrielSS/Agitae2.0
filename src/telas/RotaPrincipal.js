@@ -4,10 +4,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Inicial from './Inicial'
-import Historico from './Historico'
-import Perfil from './Perfil'
-import Pesquisa from './Pesquisa'
-import Carrinho from './Carrinho'
+//import Historico from './Historico'
+//import Perfil from './Perfil'
+//import Pesquisa from './Pesquisa'
+//import Carrinho from './Carrinho'
 
 const Tab = createBottomTabNavigator();
 
@@ -48,11 +48,9 @@ const Tab = createBottomTabNavigator();
               tabBarActiveBackgroundColor:preto,
               tabBarInactiveBackgroundColor:preto,
             })}>
-          <Tab.Screen name="Historico" component={Historico} />
-          <Tab.Screen name="Carrinho" component={Carrinho} />
+          
           <Tab.Screen name="Home" component={Inicial} />
-          <Tab.Screen name="Pesquisa" component={Pesquisa} />
-          <Tab.Screen name="Perfil" component={Perfil} />
+          
           </Tab.Navigator>
     </NavigationContainer>
   }

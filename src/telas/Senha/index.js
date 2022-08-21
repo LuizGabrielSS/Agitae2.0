@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import { TextInput, Text ,TouchableOpacity,ScrollView, View,KeyboardAvoidingView,Platform} from "react-native";
 import estilos from './Estilos';
-import {Auth} from '../../../contexts/Auth'
+import {Auth} from '../../contexts/Auth'
 import FallBack from '../../components/FallBack'
 import Alerta from '../../components/Alerta'
 
@@ -82,14 +82,14 @@ export default function Senha({navigation}){
                 style={StatusSenha}
                 onChangeText={value =>{SetSenha(value)}}
                 keyboardType="default"
-                placeholder="Digite sua senha"
+                placeholder="Digite sua nova senha"
                 secureTextEntry={true}
                 />
                 <TextInput
                 style={StatusPassword}
                 onChangeText={value =>{SetPassword(value)}}
                 keyboardType="default"
-                placeholder="Digite sua senha"
+                placeholder="Confirme a sua nova senha"
                 secureTextEntry={true}
                 />
                 <TouchableOpacity style={estilos.ContainerBotao} onPress={() => Logar()}>
