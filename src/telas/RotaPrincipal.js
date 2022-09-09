@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Inicial from './Inicial'
 //import Historico from './Historico'
 //import Perfil from './Perfil'
-//import Pesquisa from './Pesquisa'
+import Pesquisa from './Pesquisa'
 //import Carrinho from './Carrinho'
 
 const Tab = createBottomTabNavigator();
@@ -50,7 +50,7 @@ const Tab = createBottomTabNavigator();
             })}>
           
           <Tab.Screen name="Home" component={Inicial} />
-          
+          <Tab.Screen name="Pesquisa" component={Pesquisa} />
           </Tab.Navigator>
     </NavigationContainer>
   }
