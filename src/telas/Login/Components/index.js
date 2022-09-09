@@ -59,7 +59,7 @@ export default function TelaLogin({navigation}){
         <View style={estilos.ContainerLogin}>
             <Text style={estilos.TextoLogin}>Login</Text>
         </View>
-        <ScrollView>
+        <ScrollView style={estilos.ContainerInputs}>
             <TextInput
             style={StatusEmail}
             onChangeText={value =>{SetEmail(value)}}

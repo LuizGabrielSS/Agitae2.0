@@ -16,7 +16,7 @@ export default StyleSheet.create({
         padding: 10,
         marginHorizontal:10,
         marginVertical:10,
-
+        height:"95%",
     },
     ContainerAcompanhante:{
         alignItems:'center',
@@ -26,7 +26,8 @@ export default StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        margin:10
+        margin:10,
+        justifyContent:"center",
     },
     TituloAcompanhante:{
         fontSize:22,

@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { View, FlatList, Text } from 'react-native';
 import styles from './Estilos';
-import Data from '../../../../mocks/Promocoes'
 
-export function Carrossel({ data, tempoAnimacao = 1000 }){
+export default function Carrossel({ data, tempoAnimacao = 1000 }){
   const [ indice, setIndice ] = useState(0);
   const carrosselRef = useRef();
 
@@ -29,14 +28,14 @@ export function Carrossel({ data, tempoAnimacao = 1000 }){
   return (
     <View style={styles.container}>
       <FlatList
-        data={Data}
+        data={data}
         horizontal
         showsHorizontalScrollIndicator={false}
         keyExtractor={item => item.id}
         renderItem={({ item, index }) => (
-            <View style={[styles.image, index == data.length-1 ? { marginRight: 200 } : null,{BackgroundColor:item.color}]}>
-            <Text>{item.TItulo}</Text>
-            <Text>{item.Promocao}</Text>
+            <View style={[styles.image,{backgroundColor: item.color}, index == data.length-1 ? { marginRight: 200 } : null]}>
+            <Text style={styles.titulo}>{item.Titulo}</Text>
+            <Text  style={styles.promocoes}>{item.Promocoes}</Text>
             </View>
         )}
         ref={carrosselRef}
