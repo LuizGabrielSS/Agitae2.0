@@ -1,9 +1,10 @@
-import React, { useContext} from 'react';
+import React, {useState, useContext} from 'react';
 import { Text ,TouchableOpacity,ScrollView, View,Image,Modal} from "react-native";
 import estilos from './Estilos';
 import {Auth} from '../../contexts/Auth'
 import FallBack from '../../components/FallBack'
 import Alerta from '../../components/Alerta'
+import { Entypo,MaterialIcons } from '@expo/vector-icons'; 
 
 export default function Perfil({navigation}){
 
@@ -35,15 +36,15 @@ export default function Perfil({navigation}){
                 <Text style={estilos.LogOut}>LogOut</Text>
             </TouchableOpacity>
             <TouchableOpacity style={estilos.ContainerFoto} onPress={() => OpenCamera()}>
-                <Image source={{uri:{Foto}}}/>
-                colocar icone da camera aqui
+                {/* <Image style={estilos.Foto} source={{uri:{Foto}}}/> */}
+                <MaterialIcons name="add-a-photo" size={24} color="black" />
             </TouchableOpacity>
             <View style={estilos.ContainerNome}>
                 <Text style={estilos.Nome}>{Usuario}</Text>
             </View>
-            <TouchableOpacity style={estilos.ContainerData}  onPress={() => OpenCamera()}>
+            <TouchableOpacity style={estilos.ContainerData} onPress={() => OpenModal()}>
                 <Text style={estilos.Data}>Meus Dados</Text>
-                colocar icone do lapis aqui
+                <Entypo name="pencil" size={24} color="black" />
             </TouchableOpacity>
             <View style={estilos.ContainerDados}>
                 <Text style={estilos.NomeDado}>CPF:</Text>

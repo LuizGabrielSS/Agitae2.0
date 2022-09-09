@@ -1,16 +1,17 @@
 import React, { createContext, useState } from 'react'
+import Fotos from './Sem_Foto.jpg'
 
 export const Auth = createContext({})
 
 export default function AuthProvider({ children }) {
     
     //Login
-    const[Usuario, SetUsuario] = useState([])
-    const[CPF,SetCPF] = useState([])
-    const[Email,SetEmail] = useState([])
-    const[Senha,SetSenha] = useState([])
-    const[Celular,SetCelular] = useState([])
-    const[Foto,SetFoto] = useState([])
+    const[Usuario, SetUsuario] = useState("Luiz")
+    const[CPF,SetCPF] = useState('000.000.000-00')
+    const[Email,SetEmail] = useState('email.email@email.com')
+    const[Senha,SetSenha] = useState('123456')
+    const[Celular,SetCelular] = useState('(00) 00000-0000')
+    const[Foto,SetFoto] = useState(Fotos.uri)
 
     //Compras
     const[Carrinho,SetCarrinho] = useState([])
