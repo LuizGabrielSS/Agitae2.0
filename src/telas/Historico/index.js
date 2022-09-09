@@ -4,7 +4,12 @@ import {Text, View} from 'react-native'
 export default function Pesquisa(){
     return(
         <View>
-            <Text>oi</Text>
+            <Text>
+                Por falta de ideia criativa,
+                Essa tela não vai ter nada
+                Muito obrigado pela atenção
+                E até a próxima
+            </Text>
         </View>
     )
 }
