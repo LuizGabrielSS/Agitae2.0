@@ -25,6 +25,7 @@
     "expo-screen-capture": "~4.1.1",
     "expo-status-bar": "~1.2.0",
     "expo-updates": "~0.11.7",
+    "intl": "^1.2.5",
     "lottie-react-native": "5.0.1",
     "native-base": "^3.4.9",
     "react": "17.0.1",

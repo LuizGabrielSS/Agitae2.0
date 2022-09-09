@@ -5,7 +5,8 @@ const Pesquisa = [
         preco:"92.24",
         autor:"Turner, Emard and Breitenberg",
         cor:"#0b5222",
-        id:1
+        id:1,
+        
     },
     {
         nome:"Wine - Charddonnay Errazuriz",
@@ -13,7 +14,8 @@ const Pesquisa = [
         preco:"66.23",
         autor:"Heidenreich LLC",
         cor:"#f2c432",
-        id:2
+        id:2,
+        
     },
     {
         nome:"Pears - Bosc",
@@ -21,7 +23,8 @@ const Pesquisa = [
         preco:"9.42",
         autor:"Johnson, Dietrich and Bruen",
         cor:"#2c7b44",
-        id:3
+        id:3,
+        
     },
     {
         nome:"Nut - Hazelnut, Ground, Natural",
@@ -29,7 +32,8 @@ const Pesquisa = [
         preco:"57.6",
         autor:"Keeling, Yundt and Mraz",
         cor:"#45b851",
-        id:4
+        id:4,
+        
     },
     {
         nome:"Cake - Box Window 10x10x2.5",
@@ -37,7 +41,8 @@ const Pesquisa = [
         preco:"71.57",
         autor:"Hodkiewicz Inc",
         cor:"#b7f3f1",
-        id:5
+        id:5,
+        
     },
     {
         nome:"Beef - Ground Medium",
@@ -45,7 +50,8 @@ const Pesquisa = [
         preco:"38.14",
         autor:"Hauck-Mertz",
         cor:"#cadc0b",
-        id:6
+        id:6,
+        
     },
     {
         nome:"Wine - Chianti Classico Riserva",
@@ -53,7 +59,8 @@ const Pesquisa = [
         preco:"82.92",
         autor:"Pacocha, Legros and Kozey",
         cor:"#973c3b",
-        id:7
+        id:7,
+        
     },
     {
         nome:"Foam Espresso Cup Plain White",
@@ -61,7 +68,8 @@ const Pesquisa = [
         preco:"21.19",
         autor:"Harris, Stracke and Herzog",
         cor:"#7e7912",
-        id:8
+        id:8,
+        
     },
     {
         nome:"Chocolate - Liqueur Cups With Foil",
@@ -69,7 +77,8 @@ const Pesquisa = [
         preco:"67.18",
         autor:"Cummerata LLC",
         cor:"#441233",
-        id:9
+        id:9,
+        
     },
     {
         nome:"Carrots - Mini, Stem On",
@@ -77,7 +86,8 @@ const Pesquisa = [
         preco:"17.33",
         autor:"Mante Group",
         cor:"#bee57e",
-        id:10
+        id:10,
+        
     },
     {
         nome:"Pastry - Lemon Danish - Mini",
@@ -85,7 +95,8 @@ const Pesquisa = [
         preco:"72.83",
         autor:"Schaefer, Cummerata and Murazik",
         cor:"#640039",
-        id:11
+        id:11,
+        
     },
     {
         nome:"Lamb - Loin Chops",
@@ -93,7 +104,8 @@ const Pesquisa = [
         preco:"9.93",
         autor:"Vandervort-Walsh",
         cor:"#15e7e9",
-        id:12
+        id:12,
+        
     },
     {
         nome:"Pasta - Canelloni",
@@ -101,7 +113,8 @@ const Pesquisa = [
         preco:"66.88",
         autor:"Hickle, Jaskolski and Willms",
         cor:"#92f414",
-        id:13
+        id:13,
+        
     },
     {
         nome:"Cheese - Pied De Vents",
@@ -109,7 +122,8 @@ const Pesquisa = [
         preco:"2.76",
         autor:"Sauer Group",
         cor:"#1e3ea4",
-        id:14
+        id:14,
+        
     },
 ];
 

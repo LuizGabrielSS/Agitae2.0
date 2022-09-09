@@ -1,19 +1,36 @@
 import React from 'react';
-
 import { FlatList,ScrollView } from 'react-native';
-
-import StatusCarrinho from '../../componentes/StatusCarrinho';
-import Item from './Item';
+import Data from '../../Mocks/Pesquisa';
+import StatusCarrinho from './Components/StatusCarrinho';
+import Card from './Components/Card';
+import { Auth } from '../../contexts/Auth';
 
 export default function Carrinho() {
-    const total = servicos.reduce((soma, {preco, quantidade}) => soma + (preco * quantidade), 0);
-  
-    return <ScrollView>
-      <StatusCarrinho total={total} />
-      <FlatList
-        data={servicos}
-        renderItem={({item}) => <Item {...item}  />}
-        keyExtractor={({id}) => String(id)}
-      />
-    </ScrollView>
+
+  const {Total} = React.useContext(Auth)
+
+  const {SetTotal} = React.useContext(Auth)
+
+  const {Quantidade} = React.useContext(Auth)
+
+  const RenderItem = ({ item }) => 
+    <Card
+    nome={item.nome}
+    preco={item.preco}
+    descricao={item.descricao}
+    quantidade={Quantidade}
+    autor={item.autor}
+    SetTotal={SetTotal}
+    Total={Total}
+    />;
+    
+    return(
+    <>
+    <FlatList
+    data={Data}
+    renderItem={RenderItem}
+    keyExtractor={item => item.id}
+    />
+    <StatusCarrinho total={Total}/>
+    </>)
   }
