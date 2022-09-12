@@ -13,11 +13,11 @@ const Tab = createBottomTabNavigator();
 
   export default function Rotas(){
 
-    const roxo = "#9900cc"
+    const roxo = "#000"
 
     const branco = "#fff"
 
-    const preto = "#000"
+    const preto = "#9900cc"
 
       return <NavigationContainer
       independent={true}

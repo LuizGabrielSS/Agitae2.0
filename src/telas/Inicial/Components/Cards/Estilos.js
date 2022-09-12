@@ -1,16 +1,13 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-
-
 export default StyleSheet.create({
     container:{
-        height: 250,
         marginHorizontal: 25,
         marginBottom: 20,
         borderWidth: 5,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        borderColor:'white'
+        borderColor:"#9900cc"
     },
     containerTitulo:{
         padding: 20,
@@ -31,10 +28,11 @@ export default StyleSheet.create({
     ContainerInfo:{
         padding: 20,
         marginBottom: 20,
+        backgroundColor: "#9900cc",
     },
     Info:{
-        fontSize: 14,
+        fontSize: 24,
         marginHorizontal: 15,
-        color: 'white',
+        color: "#000",
     },
 })

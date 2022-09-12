@@ -5,10 +5,10 @@ export default function Pesquisa(){
     return(
         <View>
             <Text>
-                Por falta de ideia criativa,
-                Essa tela não vai ter nada
-                Muito obrigado pela atenção
-                E até a próxima
+                Essa pagina ficará desse modo
+            </Text>
+            <Text>
+                Por falta de criatividade dos desenvolvedores no momento da criação das paginas
             </Text>
         </View>
     )

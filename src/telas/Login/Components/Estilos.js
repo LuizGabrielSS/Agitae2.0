@@ -5,6 +5,8 @@ import {
 
 const Dime = Dimensions.get('screen').width;
 
+const Dimes = Dimensions.get('screen').height;
+
 export default StyleSheet.create({
     Container:{
         backgroundColor:"#fff",
@@ -16,7 +18,19 @@ export default StyleSheet.create({
         padding: 10,
         marginHorizontal:10,
         marginVertical:10,
-        height:"95%",
+        justifyContent:"space-between",
+        height:Dimes,
+        width:Dime,
+    },
+    Container:{
+        backgroundColor:"#fff",
+        padding: 10,
+        marginHorizontal:10,
+        marginVertical:10,
+        justifyContent:"space-between",
+        flex:1,
+        height:Dimes,
+        width:Dime,
     },
     ContainerAcompanhante:{
         alignItems:'center',

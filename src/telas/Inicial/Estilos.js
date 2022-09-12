@@ -7,7 +7,7 @@ const Dime = Dimensions.get('screen').width;
 const Dimes = Dimensions.get('screen').height;
 export default StyleSheet.create({
     container:{
-        backgroundColor:"#000",
+        backgroundColor:"#fff",
         width:Dime,
         height:Dimes,
     },
@@ -17,7 +17,7 @@ export default StyleSheet.create({
         alignItems:"center",
     },
     Titulo:{
-        color:"#fff",
+        color:"#000",
         fontSize:32,
         fontWeight:"bold",
     },
@@ -27,7 +27,7 @@ export default StyleSheet.create({
         justifyContent:"center",
     },
     Perto:{
-        color:"#fff",
+        color:"#000",
         fontSize:25,
         fontWeight:"bold",
         alignItems:"center"

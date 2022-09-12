@@ -10,6 +10,7 @@ export default StyleSheet.create({
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
         padding: 20,
+        borderColor:'#FFF',
     },
     Nome:{
         fontWeight:"bold",
@@ -26,6 +27,7 @@ export default StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
+        borderColor:"#9900cc",
     },
     Descricao:{
         fontSize: 15,

@@ -24,30 +24,31 @@ export default function TelaLogin({navigation}){
 
     //Função do Botao Logar
     function Logar(){
-        if(Email.length != 0){
-            if(Password.length != 0){
-                if(Email == Usuario){
-                    if(Password == Senha){
-                        navigation.navigate('Inicial')
-                    }else if(Password != Senha){
-                        SetStatusPassword(estilos.InputErrado)
-                        SetStatusEmail(estilos.Input)
-                        Alerta("Campo Senha Errado","Senha Incorreta","OK",FallBack())
-                    }
-                }else if(Email != Usuario){
-                    SetStatusEmail(estilos.InputErrado)
-                    SetStatusPassword(estilos.Input)
-                    Alerta("Campo Login Errado","Usuario não encontrado","OK",FallBack())
-                }
-            }else{
-                SetStatusPassword(estilos.InputErrado)
-                SetStatusEmail(estilos.Input)
-                Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
-            }
-        }else{
-            SetStatusEmail(estilos.InputErrado)
-            Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
-        }
+        navigation.navigate('Inicial')
+        // if(Email.length != 0){
+        //     if(Password.length != 0){
+        //         if(Email == Usuario){
+        //             if(Password == Senha){
+        //                 navigation.navigate('Inicial')
+        //             }else if(Password != Senha){
+        //                 SetStatusPassword(estilos.InputErrado)
+        //                 SetStatusEmail(estilos.Input)
+        //                 Alerta("Campo Senha Errado","Senha Incorreta","OK",FallBack())
+        //             }
+        //         }else if(Email != Usuario){
+        //             SetStatusEmail(estilos.InputErrado)
+        //             SetStatusPassword(estilos.Input)
+        //             Alerta("Campo Login Errado","Usuario não encontrado","OK",FallBack())
+        //         }
+        //     }else{
+        //         SetStatusPassword(estilos.InputErrado)
+        //         SetStatusEmail(estilos.Input)
+        //         Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
+        //     }
+        // }else{
+        //     SetStatusEmail(estilos.InputErrado)
+        //     Alerta("Campo Login vazio","Não pode deixar campos vazios na tentativaa de login","OK",FallBack())
+        // }
     }
 
     return(<KeyboardAvoidingView
@@ -57,6 +58,7 @@ export default function TelaLogin({navigation}){
         <View style={estilos.ContainerLogin}>
             <Text style={estilos.TextoLogin}>Login</Text>
         </View>
+        <View style={estilos.ContainerSimples}>
         <ScrollView style={estilos.ContainerInputs}>
             <TextInput
             style={StatusEmail}
@@ -82,5 +84,6 @@ export default function TelaLogin({navigation}){
                 <Text style={estilos.TextoOutrosBotoes}>Esqueci minha senha</Text>
             </TouchableOpacity>
         </ScrollView>
+        </View>
         </KeyboardAvoidingView>)
     }

@@ -16,9 +16,6 @@ cor={item.cor}
 export default function Inicial(){
     return(
         <View style={Estilos.container}>
-            <View style={Estilos.containerTitulo}>
-                <Text style={Estilos.Titulo}>Bem vindo</Text>
-            </View>
             <Carrousel data={Data} tempoAnimacao={2000}/>
             <View style={Estilos.ContainerPerto}>
                 <Text style={Estilos.Perto}>Perto de você</Text>

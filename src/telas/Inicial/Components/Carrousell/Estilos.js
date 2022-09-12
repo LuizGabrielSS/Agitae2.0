@@ -14,7 +14,7 @@ export default StyleSheet.create({
     borderTopRightRadius: 20,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
-    borderColor:'white'
+    borderColor:"#9900cc"
   },
   titulo:{
     fontSize: 20,
