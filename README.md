@@ -17,5 +17,6 @@ Sorvete
 Avise ao time nos enviando mensagem nas redes sociais ou aqui mesmo no github, vamos tentar te ajudar e lhe dar total apoio no que você esta desenvolvendo
 
 
+# APLICATIVO EM FUNCIONAMENTO
 
-https://user-images.githubusercontent.com/68171543/190163975-cd41e894-d189-4a3d-b2d6-350c6c2c9991.mp4
+https://user-images.githubusercontent.com/68171543/190164164-0ba8ba75-6c00-41dd-ba05-0afe3055a51f.mp4
